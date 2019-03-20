@@ -1,16 +1,16 @@
-#HPE Nimble Storage Application Snapshot Agent for SAP HANA
+# HPE Nimble Storage Application Snapshot Agent for SAP HANA
 
 The HPE Nimble Storage Application Snapshot Agent for SAP HANA uses the *HPE Nimble Storage Snapshot Framework* to support application consistent and integrated storage level snapshots of SAP HANA. 
 
 The workflow for the HPE Nimble Storage Application Snapshot Agent for SAP HANA has 3 phases :
 
-###1. Pre-Snapshot Operation
+### 1. Pre-Snapshot Operation
 In this phase, Nimble OS communicates with the agent to execute a hdbsql command to create a savepoint in the SAP HANA database. Once the savepoint is created, the agent then queries the SAP HANA database to the savepoint identifier. The agent then waits for 60 seconds to allow SAP HANA to write metadata into the file system 
 
-###2. Storage snapshot creation on Nimble OS 
+### 2. Storage snapshot creation on Nimble OS 
 Once the pre-snapshot phase completes, Nimble OS takes the snapshot of all the volumes that form the application storage (consistency group).
 
-###3. Post-Snapshot Operation 
+### 3. Post-Snapshot Operation 
 Nimble OS communicates with the agent again by passing information related to the snapshot completion If the snapshot was successful, the snapshot ID is sent to the agent. The agent then executes another hdbsql command to confirm the backup was successful. If the snapshot failed, the agent will execute a hdbsql statement to that effect.
 
 ----
