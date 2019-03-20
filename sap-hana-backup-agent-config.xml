@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<sap_hana_backup_agent>
+    <host_ip></host_ip>
+    <port></port>
+    <instance></instance>
+    <number_of_snapshots_retained></number_of_snapshots_retained>
+</sap_hana_backup_agent>

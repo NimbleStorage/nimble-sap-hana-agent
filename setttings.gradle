@@ -1,0 +1,5 @@
+/**
+ * Copyright 2016 Nimble Storage, Inc.
+ */
+ 
+rootProject.name = 'nimble-sap-agent'
