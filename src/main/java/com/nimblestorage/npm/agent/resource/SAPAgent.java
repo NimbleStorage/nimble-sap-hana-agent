@@ -1,5 +1,5 @@
 /**
- * Copyright 2018 Hewlett Packard Enterprise Development LP
+ * Copyright 2019 Hewlett Packard Enterprise Development LP
  */
 package com.nimblestorage.npm.agent.resource;
 
@@ -22,7 +22,7 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-//NOTE: The environment variable SAP_JDBC_DRIVER must be set on the host machine
+// NOTE: The environment variable SAP_JDBC_DRIVER must be set on the host machine
 // in order for this to work.  It must point to the local instance of ngdbc.jar.
 
 public class SAPAgent {

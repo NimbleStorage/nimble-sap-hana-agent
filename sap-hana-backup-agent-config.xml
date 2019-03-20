@@ -1,4 +1,5 @@
 <?xml version="1.0"?>
+<!-- Copyright 2019 Hewlett Packard Enterprise Development LP -->
 <sap_hana_backup_agent>
     <host_ip></host_ip>
     <port></port>
