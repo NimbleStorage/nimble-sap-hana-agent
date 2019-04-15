@@ -1,4 +1,4 @@
-# HPE Nimble Storage Application Snapshot Agent for SAP HANA
+## HPE Nimble Storage Application Snapshot Agent for SAP HANA
 
 The HPE Nimble Storage Application Snapshot Agent for SAP HANA uses the [HPE Nimble Storage Snapshot Framework](https://infosight.hpe.com/InfoSight/media/cms/active/pubs_Nimble_Snapshot_Framework_NOS_4x.whz/index.html) (requires HPE InfoSight login) to support application consistent and integrated storage level snapshots of SAP HANA. 
 
@@ -16,7 +16,7 @@ The workflow for the HPE Nimble Storage Application Snapshot Agent for SAP HANA 
 
    Nimble OS communicates with the agent again by passing information related to the snapshot completion If the snapshot was successful, the snapshot ID is sent to the agent. The agent then executes another hdbsql command to confirm the backup was successful. If the snapshot failed, the agent will execute a hdbsql statement to that effect.
 
-# Implementation details
+## Implementation details
 This implementation of the Agent is in Java with Jetty 8.1 as the servlet container for the REST server.
 
 - `AgentService.java` has the main method to start the server.
@@ -25,7 +25,7 @@ This implementation of the Agent is in Java with Jetty 8.1 as the servlet contai
 - To build and run the application, you need Java and `gradle` installed on your dev machine.
 - Gradle will use maven central repository to pull down some dependent libraries, so your dev machine needs to be connected to the internet.
 
-# Building the agent
+## Building the agent
 Steps to import the project, build and run:
 
 1. Download and install Java 8 and latest version of gradle
@@ -36,7 +36,7 @@ This generates the files required for the project to be imported into eclipse.
 4. To build, run `gradle build`
 5. To run the application via gradle, execute `gradle run`
 
-# Package
+## Package
 After compilation, the deliverable will be located in build/distributions as a zip file.
 Uncompressed the deliverable folder would look like this:
 ```
@@ -48,7 +48,7 @@ nimble-backup-agent-ri
   ↳ .jar files
 ```
 
-# Installation
+## Installation
 To install the SAP HANA backup agent, perform the following steps:
 
 1. Unzip the deliverable file to your run location on the host machine. This will be referred to as the AGENT-DIR in subsequent steps.
@@ -67,7 +67,7 @@ To install the SAP HANA backup agent, perform the following steps:
 
 5. Set the `SAP_JDBC_DRIVER` environment variable to point to the `ngdbc.jar` file. The easiest way to do this is to modify the `.bashrc` file by adding the following line:
    ```
-   export SAP_JDBC_DRIVER=/[PATH]/[TO]/ngdbc.jar
+   export SAP_JDBC_DRIVER=/PATH]/TO/ngdbc.jar
    ```
    This will ensure that the environment variable for the backup agent user is set at login.
 
@@ -82,5 +82,5 @@ To install the SAP HANA backup agent, perform the following steps:
    ./nimble-sap-agent
    ```
 
-# License
+## License
 This software is licensed under the Apache License version 2.0. Please see the [LICENSE](LICENSE) file for full terms and conditions.
