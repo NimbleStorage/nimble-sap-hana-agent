@@ -78,7 +78,7 @@ To install the SAP HANA backup agent, perform the following steps:
 
 7. To launch the backup agent:
    ```
-   cd /AGENT-DIR/bin
+   cd AGENT-DIR/bin
    ./nimble-sap-agent
    ```
 
